@@ -1,38 +1,53 @@
 caption {
-    text-align: center;
     font-weight: bold;
     font-size: xx-large;
 }
+
 table {
     margin: 0 auto;
 }
+
 td {
-    width: 49px;
-    height: 49px;
-    text-align: center;
     color: gray;
     font-weight: bold;
 }
-tr:nth-child(2n+1) td:nth-child(2n), tr:nth-child(2n) td:nth-child(2n+1) {
+
+tr:nth-child(2n+1) td:nth-child(2n),
+tr:nth-child(2n) td:nth-child(2n+1) {
     background-color: gray;
-    color: white;
 }
+
+img {
+    vertical-align: middle;
+}
+
+td, img {
+    --cell-size: 8vmin;
+    width: clamp(30px, var(--cell-size), 50px);
+    height: clamp(30px, var(--cell-size), 50px);
+}
+
 .QUEEN {
     border: 3px solid red;
 }
+
 .BLOCKED {
     border: 3px solid blue;
 }
+
 .EMPTY {
     border: 3px solid black;
 }
+
 fieldset {
-    width: 450px;
+    width: clamp(290px, 64vmin, 455px);
     margin: 0 auto;
 }
+
 input[type="number"] {
     width: 3em;
 }
+
 #message {
     text-align: center;
 }
