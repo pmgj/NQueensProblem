@@ -15,7 +15,7 @@ class GUI {
     }
     resetBoard() {
         let form = document.forms[0];
-        let size = parseInt(form.size.value);
+        let size = form.size.valueAsNumber;
         let tbody = document.querySelector("tbody");
         tbody.innerHTML = "";
         for (let i = 0; i < size; i++) {
