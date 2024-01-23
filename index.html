@@ -6,26 +6,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="module" src="scripts/GUI.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="icon" type="image/svg" href="Black-Queen.svg" />
 </head>
 
 <body>
     <table>
-        <caption>N Queens Problem</caption>
+        <caption class="caption-top text-center text-black">N Queens Problem</caption>
         <tbody>
         </tbody>
     </table>
-    <fieldset>
-        <legend>Options:</legend>
-        <form>
-            <ul>
-                <li>Board size: <input type="number" name="size" min="4" max="10" value="8" /></li>
-                <li><input type="button" value="Solve" name="solve" /></li>
-                <li><input type="button" value="Reset" name="reset" /></li>
-            </ul>
-        </form>
-    </fieldset>
+    <form action="#" class="container mb-2">
+        <div class="d-flex justify-content-center mt-2">
+            <div class="p-1 mt-2">
+                <label for="size">Board size:</label>
+            </div>
+            <div class="p-1">
+                <input type="number" id="size" value="8" min="4" max="10" step="2" class="form-control">
+            </div>
+            <div class="p-1">
+                <input type="button" value="Solve" name="solve" class="btn btn-primary">
+            </div>
+            <div class="p-1">
+                <input type="button" value="Reset" name="reset" class="btn btn-secondary">
+            </div>
+        </div>
+    </form>
     <p id="message"></p>
 </body>
 

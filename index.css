@@ -5,6 +5,7 @@ caption {
 
 table {
     margin: 0 auto;
+    border-collapse: separate;
 }
 
 td {
@@ -18,13 +19,14 @@ tr:nth-child(2n) td:nth-child(2n+1) {
 }
 
 img {
-    vertical-align: middle;
+    /* vertical-align: middle; */
+    width: 90%;
 }
 
-td, img {
-    --cell-size: 8vmin;
-    width: clamp(30px, var(--cell-size), 50px);
-    height: clamp(30px, var(--cell-size), 50px);
+td {
+    --cell-size: 10vmin;
+    width: clamp(30px, var(--cell-size), 60px);
+    height: clamp(30px, var(--cell-size), 60px);
 }
 
 .QUEEN {
